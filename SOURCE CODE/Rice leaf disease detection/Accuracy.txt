@@ -1,0 +1,9 @@
+Rice Leaf Disease Detection using Efficientnet
+
+Algorithm / Model Used: Efficientnetb5 Architecture
+
+training accuracy of 95.34%. and validation accuracy of 97.00%
+
+
+
+
