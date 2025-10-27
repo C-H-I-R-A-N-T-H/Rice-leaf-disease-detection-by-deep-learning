@@ -1,36 +1,33 @@
-﻿# Rice-leaf-disease-detection-by-deep-learning
+🌾 Rice Leaf Disease Detection (Deep Learning)
+A Python project using a Convolutional Neural Network (CNN) to classify diseases in rice leaves from images. The model is deployed via a Flask web application.
 
-🌾 Rice Leaf Disease Detection using Deep Learning (CNN)This project implements a robust deep learning solution using Convolutional Neural Networks (CNN) to accurately classify and detect various diseases affecting rice leaves from images. This automated system is designed to assist farmers and agricultural experts in the early diagnosis of plant diseases, helping to ensure timely treatment and minimize crop loss.✨ FeaturesDeep Learning Classification: Utilizes a custom CNN architecture, potentially enhanced with pre-trained models like EfficientNet, for high-accuracy disease identification.Disease Classes: Capable of classifying rice leaves into categories such as:HealthyBrown SpotLeaf SmutBacterial Leaf Blight(Classes may vary based on the specific dataset used.)Web Interface (Flask): Includes a simple, lightweight web application built with Flask for easily uploading leaf images and getting real-time disease predictions.Reproducible Environment: Full environment and dependency management via requirements.txt.🛠️ Installation1. Clone the RepositoryBashgit clone https://github.com/C-H-I-R-A-N-T-H/Rice-leaf-disease-detection-by-deep-learning.git
+🛠️ Setup & Installation
+Clone Repository:
+
+Bash
+
+git clone https://github.com/C-H-I-R-A-N-T-H/Rice-leaf-disease-detection-by-deep-learning.git
 cd Rice-leaf-disease-detection-by-deep-learning
-2. Set up the EnvironmentIt is highly recommended to use a virtual environment.Bash# Create a virtual environment
-python -m venv venv
-# Activate the virtual environment
-source venv/bin/activate  # On Linux/macOS
-# or .\venv\Scripts\activate.bat on Windows
-3. Install DependenciesThe required packages are listed below and can be installed using pip.Create a file named requirements.txt with the following content:tensorflow==2.12.0
-Flask==2.2.2
-Werkzeug==2.2.2
-pillow==9.4.0
-efficientnet==1.1.1
-protobuf==3.20.0
-gevent==24.2.1
-Now, install them:Bashpip install -r requirements.txt
-🚀 UsageOption 1: Run the Web ApplicationThe project is structured for deployment using Flask and gevent for a stable server.Ensure you have a trained model file (e.g., model.h5) in the project directory.Run the main application file (e.g., app.py or main.py):Bashpython app.py
-Open your web browser and navigate to the displayed URL (typically http://127.0.0.1:5000/).Upload a rice leaf image to receive an instant disease prediction.Option 2: Retrain the ModelTo train the model on a new or updated dataset, you will typically run a Jupyter Notebook or a training script.Bash# Start Jupyter Notebook
-jupyter notebook
-# Open and run the 'rice_disease_detection_training.ipynb' file
-📁 Project StructureRice-leaf-disease-detection-by-deep-learning/
-├── app.py                  # Flask application script for prediction service
-├── requirements.txt        # List of project dependencies
-├── README.md               # Project documentation (this file)
-├── model.h5                # The trained Deep Learning model file
-├── notebooks/
-│   └── rice_disease_detection_training.ipynb # Jupyter Notebook for training/evaluation
-├── static/                 # Static files (CSS, JS, prediction results)
-├── templates/              # HTML templates for the Flask web application
-├── dataset/
-│   ├── train/
-│   ├── validation/
-│   └── test/
-└── utils/                  # Helper scripts (e.g., preprocessing, data loading)
-📊 DatasetThe model is trained on a dataset of rice leaf images containing labeled examples of healthy and diseased leaves.Source: (Specify the dataset source, e.g., Kaggle, a custom collection, or PlantVillage.)Preprocessing: Images are typically resized (e.g., 224x224), normalized, and augmented (rotation, zoom, flip) to improve model robustness and generalization.🧠 Model ArchitectureThe core of the system is a Convolutional Neural Network (CNN).Base Model: The architecture leverages the power of pre-trained weights through Transfer Learning, potentially utilizing the EfficientNet family of models, known for its high accuracy and efficiency.Layers: Includes Convolutional layers, Batch Normalization, Pooling layers, and a final Dense layer with a Softmax activation function for multi-class classification.Loss Function: Categorical Cross-Entropy.Optimizer: Adam.📈 Results(This section should be updated with actual performance metrics after training.)MetricValueTraining AccuracyXX.XX%Validation AccuracyYY.YY%Test AccuracyZZ.ZZ%Model SizeX.X MB🤝 ContributionFeel free to open issues or submit pull requests for any bug fixes or feature additions.
+Install Dependencies: (Ensure Python is installed)
+
+Bash
+
+pip install tensorflow==2.12.0 Flask==2.2.2 Werkzeug==2.2.2 pillow==9.4.0 efficientnet==1.1.1 protobuf==3.20.0 gevent==24.2.1
+🚀 Usage
+Run the web application to start the prediction service:
+
+Bash
+
+python app.py
+Access the live prediction at http://127.0.0.1:5000/.
+
+🧠 Key Technologies
+Deep Learning: TensorFlow/Keras
+
+Model: CNN (EfficientNet recommended)
+
+Web Framework: Flask
+
+Web Server: gevent
+
+Image Processing: Pillow, Werkzeug
